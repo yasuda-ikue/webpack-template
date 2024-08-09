@@ -1,0 +1,25 @@
+<!--  ページコンテンツのメイン部分です -->
+<%
+  const sectionList = [
+    {
+      key:"section1",
+      title:"セクションタイトル-h2",
+    },
+    {
+      key:"section2",
+      title:"セクションタイトル2-h2",
+    }
+  ];
+  const includeDir = '../../pages/' + self.uniqueselector + '/';
+%>
+<div class="tp-Main">
+  <% sectionList.map((section) => { %>
+    <%
+     const sectionData = {
+        key:section.key,
+        title:section.title,
+      }
+    %>
+    <%- include('../../components/section/_section',{sectionData,includeDir }); %>
+  <% }) %>
+</div>

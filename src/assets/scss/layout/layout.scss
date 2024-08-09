@@ -1,0 +1,31 @@
+@use "../base/utils.scss" as uti;
+
+
+.lo-Wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template: 'header' auto 'contents' 1fr 'footer' auto/100%;
+  @include uti.mq-min(m) {
+    
+  }
+  @include uti.mq-min(xl) {
+    background-size: 100% auto;
+  }
+}
+
+.lo-Header {
+  grid-area: header;
+  position: sticky;
+  top:0;
+  left: 0;
+  z-index: #{map-get(uti.$z-index,top)};
+}
+.lo-Contents{
+  grid-area: contents;
+  overflow: hidden;
+}
+.lo-Footer {
+  grid-area: footer;
+}
+

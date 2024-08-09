@@ -1,0 +1,49 @@
+@use "../base/utils.scss" as uti;
+
+.st-Totop{
+  width: fit-content;
+  margin: 0 0 0 auto;
+  padding:uti.$size-margin;
+  
+}
+.st-Totop_Container{
+  width: fit-content;
+  position: relative;
+  padding: 28px uti.$size-margin 0;
+  @media (hover: hover) {
+    transition: transform ease .25s;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  &::before,&::after{
+    content: "";
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:0 auto;
+    align-items: center;
+    
+  }
+  &::before{
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: uti.$color-black;
+    border-radius: #{map-get(uti.$radius,full)};
+  }
+  &::after{
+    @include uti.icon-arrow(up);
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: uti.$color-white;
+  } 
+}
+.st-Totop_Text{
+  font-size: 1.2rem;
+  font-weight: #{map-get(uti.$font-weight,b)};
+}

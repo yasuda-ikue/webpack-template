@@ -1,0 +1,26 @@
+@use "../base/utils.scss" as uti;
+
+.st-BannerLinks{
+  --itemWidth: 168px;
+  gap: uti.$size-margin * 2;
+  margin:uti.$size-margin * 2 auto;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+.st-BannerLinksItem{
+  width: var(--itemWidth);
+}
+.st-BannerLinks-Anchor{
+  display: block;
+  @media (hover: hover) {
+    transition: opacity ease 0.25s;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

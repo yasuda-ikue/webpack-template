@@ -1,0 +1,39 @@
+<%
+const bannerLinks = [
+  {
+    href: "",
+    key: "sample",
+    alt: "サンプル",
+  },
+  {
+    href: "",
+    key: "sample",
+    alt: "サンプル",
+  },
+  {
+    href: "",
+    key: "sample",
+    alt: "サンプル",
+  },
+  {
+    href: "",
+    key: "sample",
+    alt: "サンプル",
+  },
+  {
+    href: "",
+    key: "sample",
+    alt: "サンプル",
+  },
+];
+%>
+
+<div class="st-BannerLinks">
+  <% bannerLinks.map((link) => { %>
+    <div class="st-BannerLinksItem">
+      <a href="<%- link.href %>" class="st-BannerLinks-Anchor" target="_blank">
+        <img src="<%- self.root %>assets/img/components/bannerLinks/banner_<%- link.key %>.png" alt="<%- link.alt %>" width="768" height="240" >
+      </a>
+    </div>
+  <% })%>
+</div>

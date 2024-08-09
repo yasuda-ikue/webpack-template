@@ -1,0 +1,29 @@
+@use "../variables/variables.scss" as var;
+
+$breakpoint-min: (
+  xs: 'screen and (min-width: #{var.$size-breakpoint-xs + 1px})',
+  s: 'screen and (min-width: #{var.$size-breakpoint-s + 1px})',
+  m: 'screen and (min-width: #{var.$size-breakpoint-m + 1px})',
+  l: 'screen and (min-width: #{var.$size-breakpoint-l + 1px})',
+  xl: 'screen and (min-width: #{var.$size-breakpoint-xl + 1px})'
+);
+
+$breakpoint-max: (
+  xs: 'screen and (max-width: #{var.$size-breakpoint-xs})',
+  s: 'screen and (max-width: #{var.$size-breakpoint-s})',
+  m: 'screen and (max-width: #{var.$size-breakpoint-m})',
+  l: 'screen and (max-width: #{var.$size-breakpoint-l})',
+  xl: 'screen and (max-width: #{var.$size-breakpoint-xl})'
+);
+
+@mixin mq-min($breakpoint: m) {
+  @media #{map-get($breakpoint-min, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-max($breakpoint: m) {
+  @media #{map-get($breakpoint-max, $breakpoint)} {
+    @content;
+  }
+}

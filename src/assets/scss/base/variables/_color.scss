@@ -1,0 +1,36 @@
+/* カラー　*/
+$color-black: #252525;
+$color-white: #fff;
+$color-gray: #A5A5A5;
+$color-lightgray: #EAEAEA;
+$color-darkgray: #2D2D2D;
+$color-darkblue: #0480B6;
+$color-yellow:#FFEB36;
+$color-red:#E83743;
+
+/* カラー black系 */
+$color-blackGroup:(
+  b100: '#000',
+  b90: '#191919',
+  b80: '#333',
+  b70: '#4c4c4c',
+  b60: '#666',
+  b50: '#808080',
+  b40: '#999',
+  b30: '#b2b2b2',
+  b20: '#ccc',
+  b10: '#e5e5e5',
+  b05: '#f2f2f2',
+);
+
+/* カラー ニコニコ関連 */
+$color-nicostatus-onair: #E83743;
+$color-nicostatus-timeshift: #3E8EFC;
+$color-nicostatus-past: $color-black;
+
+/* カラー 用途別 */
+$color-text: $color-black;
+$color-link: #388BFF;
+
+$color-header-bg: #{map-get($color-blackGroup, b10)};
+$color-footer-bg: #{map-get($color-blackGroup, b10)};

@@ -1,0 +1,35 @@
+<%
+const siteNav = [
+    {
+      name:'TOP',
+      link: self.root,
+    },
+    {
+      name:'メニュー１(ページ内)',
+      link:'#section1',
+    },
+    {
+      name:'メニュー2(別ページ)',
+      link:self.root + 'test/',
+    },
+    {
+      name:'メニュー２(別サイト)',
+      link:'https://',
+    },
+  ]
+%>
+
+<nav class="st-SiteNav">
+  <% siteNav.forEach((nav) => {%>
+  <div class="st-SiteNav_Item">
+    <a href="<%- nav.link %>"
+      class="st-SiteNav_Anchor" 
+      <% if( nav.link.includes('https://') || nav.link.includes('http://')){ %>
+        target="_blank"
+      <% } %>
+      >
+      <%- nav.name %>
+    </a>
+  </div>
+  <% }) %>
+</nav>

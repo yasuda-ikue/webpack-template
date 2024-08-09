@@ -1,0 +1,65 @@
+/* content-size */
+$size-content:(
+  xxs: '320px',
+  xs:'640px',
+  s:'768px',
+  m:'960px',
+  l:'1200px',
+  xl:'1440px',
+);
+
+/* margin */
+$size-margin: 8px;
+
+/* font-size */
+$font-size:(
+  xs:'12px',
+  s:'14px',
+  m:'16px',
+  o:'18px',
+  l:'22px',
+  xl:'26px',
+  xxl:'36px'
+);
+
+/*  breakpoint */
+$size-breakpoint-xs: 375px;
+$size-breakpoint-s: 768px;
+$size-breakpoint-m: 1024px;
+$size-breakpoint-l: 1280px;
+$size-breakpoint-xl: 1920px;
+
+/* z-index */
+$z-index:(
+  top: '1000',
+  middle:'500',
+  bottom: '10',
+);
+
+/* header */
+$header:(
+  low: '56px',
+  high: '68px',
+);
+
+
+/* font-weight */
+$font-weight:(
+  n:'400',
+  m:'500',
+  b:'700',
+  eb:'800',
+  bl:'900',
+);
+
+
+/* border-radius */
+$radius:(
+  xxs:'4px',
+  xs: '8px',
+  s: '16px',
+  m:'24px',
+  l: '32px',
+  full:'50%',
+  100:'100vh'
+);

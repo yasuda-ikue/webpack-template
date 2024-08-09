@@ -1,0 +1,9 @@
+
+<section id="<%- sectionData.key %>" class="st-Section">
+  <h2 class="st-Section_Heading">
+    <%- sectionData.title %>
+  </h2>
+  <div class="st-Section_Contents">
+    <%- include(includeDir + includeFilePrefix + '-parts-' + sectionData.key, {self}  ) %>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+@use "../base/utils.scss" as uti;
+
+.st-Section{
+}
+.st-Section_Heading{
+  text-align: center;
+  font-weight: #{map-get(uti.$font-weight,bl)};
+  font-size: 2.8rem;
+}
+.st-Section_Contents{
+  max-width: #{map-get(uti.$size-content,l)};
+  margin: auto;
+}
+.st-Section_Inner{
+
+}

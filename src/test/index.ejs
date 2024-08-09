@@ -1,0 +1,14 @@
+<%
+  const crypto = require('crypto');
+  const hashNumb = crypto.randomBytes(8).toString('hex');
+  const self = {
+    root: '../',
+    pageName: 'top',
+    pageDirectory: '',
+    pageTitle: 'テスト',
+    pageDescription :'ページのディスクリプション',
+    includeFilePrefix: '_top',
+    classPrefix: 'tp',
+  }
+%>
+

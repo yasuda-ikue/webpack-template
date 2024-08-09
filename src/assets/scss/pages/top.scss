@@ -1,0 +1,28 @@
+@use "../base/utils.scss" as uti;
+
+.tp-Container{
+  display: grid;
+  gap: uti.$size-margin * 3;
+}
+.tp-Head{
+
+}
+.tp-KeyVisual{
+  text-align: center;
+
+}
+.tp-KeyVisual_Container{
+  max-width: #{map-get(uti.$size-content,l)};
+  margin: auto;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.tp-KeyVisual_Heading{
+  margin: 0;
+}
+
+.tp-Main{
+
+}

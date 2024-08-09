@@ -1,0 +1,54 @@
+<%# テンプレート %>
+<%
+  
+  const crypto = require('crypto');
+  const hashNumb = crypto.randomBytes(8).toString('hex');
+  
+  const siteInfo = {
+    siteUrl :'https://site.nicovideo.jp/**/',
+    siteName : 'サイト名',
+    themaColor: '#fff',
+    siteDescription: '',
+    twitterSite:'',
+  };
+  
+  const pageUrl =  pageName === 'top' ? siteInfo.siteUrl: siteInfo.siteUrl + pageName + '/';
+  
+  const self = {
+    root: root,
+    uniqueselector: pageName ,
+    title: pageTitle,
+    description: pageDescription,
+    pageUrl:pageUrl,
+    hash: hashNumb,
+  };
+  const includeDir = '../pages/' + self.uniqueselector + '/';
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%- include( '../common/_head', {self,siteInfo}) %>
+  </head>
+  <body>
+    <%- include( '../common/_gtm') %>
+    <div class="js-HeaderTrigger"></div>
+      <div class="lo-Wrapper">
+        <div class="lo-Header" data-type="sticky">
+          <%- include( '../components/header/_header', {self} ) %>
+        </div>
+        <div class="lo-Contents <%- classPrefix %>-Contents">
+          <%- include(includeDir + includeFilePrefix + '-parts-head', {self,includeFilePrefix}  ) %>
+          <%- include(includeDir + includeFilePrefix + '-parts-main', {self,includeFilePrefix} ) %>
+        </div>
+        
+        <div class="lo-Footer">
+          <%- include( '../components/bannerLinks/_bannerLinks', {self}) %>
+          <%- include( '../components/toTop/_toTop', {self}) %>
+          <%- include( '../components/footer/_footer', {self}) %>
+        </div>
+      </div>
+      
+      <%- include( '../common/scripts/_scripts-Global', {self}) %>
+    
+    </body>
+</html>

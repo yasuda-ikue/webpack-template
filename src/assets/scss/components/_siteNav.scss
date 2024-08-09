@@ -1,0 +1,42 @@
+@use "../base/utils.scss" as uti;
+
+.st-SiteNav{
+  display: flex;
+  flex-flow: row wrap;
+  gap: uti.$size-margin*2;
+}
+.st-SiteNav_Item{
+  @include uti.mq-max(m) {
+    width: 100%;
+  }
+}
+.st-SiteNav_Anchor{
+  display: block;
+  text-decoration: none;
+  font-weight: #{map-get(uti.$font-weight,b)};
+  color:uti.$color-link;
+  position: relative;
+  padding: 0 .25em;
+  &:before{
+    content:"";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: uti.$color-link;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  @include uti.mq-min(m) {
+    &:before{
+      transition:width ease .25s;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+}

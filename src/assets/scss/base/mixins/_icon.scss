@@ -1,0 +1,26 @@
+@use "../variables/variables.scss" as var;
+@use "./mediaqueries.scss" as media;
+
+@mixin icon-arrow($direction){
+  mask: url("../img/components/icon/arrow.svg");
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  @if $direction == right{
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
+  @if $direction == left {
+    transform: rotate(-90deg);
+    transform-origin: center center;
+  }
+
+  @if $direction == up {
+    transform: rotate(0);
+    transform-origin: center center;
+  }
+
+  @if $direction == down {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+}

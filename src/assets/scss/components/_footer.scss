@@ -1,0 +1,18 @@
+@use "../base/utils.scss" as uti;
+
+.st-Footer{
+  padding: uti.$size-margin*4 uti.$size-margin*2 uti.$size-margin*2;
+  background-color: uti.$color-footer-bg;
+  
+}
+.st-Footer_Container{
+  display: grid;
+  gap: uti.$size-margin * 2;
+}
+.st-Footer_Sns{
+  
+}
+.st-Footer_Copyright{
+  font-size:1.4rem;
+  text-align: center;
+}

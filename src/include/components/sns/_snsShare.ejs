@@ -1,0 +1,22 @@
+<%
+  const tweetText = 'ニコニコ動画を始めるメリット、収益プログラムや仕組みをご紹介。再生数やファンを増やして、クリエイターとしてステップアップしよう！始めたばかりのクリエイターでも活動が続けやすい';
+  const snsAnchors = [
+    {key: 'x', src: `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(self.pageUrl)}`},
+    {key: 'facebook', src: `https://www.facebook.com/share.php?u=${encodeURIComponent(self.pageUrl)}`},
+    {key: 'line', src: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(self.pageUrl)}`}
+  ]
+%>
+
+<ul class="st-SnsList" >
+  <% snsAnchors.forEach(anchor => { %>
+    <li class="st-SnsList_Item" >
+      <a class="st-SnsList_Anchor" target="_blank" href="<%- anchor.src %>" >
+        <img 
+          class="st-SnsList_Img" 
+          width="48" height="48" 
+          src="<%- self.root %>assets/img/components/sns/<%- anchor.key %>.svg" 
+          alt="<%- anchor.key %>">
+      </a>
+    </li>
+  <% }) %>
+</ul>
